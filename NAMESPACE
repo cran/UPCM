@@ -9,7 +9,7 @@ importFrom(mvtnorm, dmvnorm)
 importFrom(numDeriv,grad)
 
   importFrom("grDevices", "grey")
-  importFrom("graphics", "abline", "points", "polygon", "text")
+  importFrom("graphics", "abline", "points", "polygon", "text", "plot")
   importFrom("stats", "pnorm", "printCoefmat")
   importFrom("utils", "head", "tail")
 

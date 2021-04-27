@@ -24,14 +24,6 @@
 #' m_upcm
 #' plot(m_upcm)
 #' }
-#' \dontshow{
-#' set.seed(1860)
-#' n <- 50
-#' I <- 2
-#' Y <- matrix(sample(1:3, I*n, replace = TRUE), ncol = I)
-#' m_upcm <- UPCM(Y = Y, cores = 1, GPCM = FALSE, se = FALSE, ctrl.nlminb = list(rel.tol = 1e-06))
-#' m_upcm
-#' }
 NULL
 
 #' Tenseness data from the Freiburg Complaint Checklist

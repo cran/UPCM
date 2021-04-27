@@ -72,12 +72,11 @@ createResponse <- function(Y){
 #' plot(m_upcm)
 #' }
 #' \dontshow{
-#' set.seed(1860)
-#' n <- 50
+#' set.seed(1860, sample.kind = "Rounding")
+#' n <- 70
 #' I <- 2
 #' Y <- matrix(sample(1:3, I*n, replace = TRUE), ncol = I)
-#' m_upcm <- UPCM(Y = Y, cores = 1, GPCM = FALSE, se = FALSE, ctrl.nlminb = list(rel.tol = 1e-06))
-#' m_upcm
+#' m_upcm <- UPCM(Y = Y, cores = 2, GPCM = FALSE, se = FALSE, Q = 6, ctrl.nlminb = list(rel.tol = 1e-06))
 #' }
 UPCM <- function(Y, X = NULL, GPCM = TRUE, Q = 10, cores = 2, lambda = 1e-2, se = TRUE,
                  method = c("nlminb", "L-BFGS-B"),
