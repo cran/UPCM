@@ -27,6 +27,9 @@ Tutz, Gerhard and Schauberger, Gunther (2020): Uncertainty in Latent Trait Model
 \code{\link{UPCM}}
 }
 \author{
+\strong{Maintainer}: Gunther Schauberger \email{gunther.schauberger@tum.de}
+
+
 Gunther Schauberger\cr \email{gunther.schauberger@tum.de}\cr
 \url{https://www.sg.tum.de/epidemiologie/team/schauberger/}
 }

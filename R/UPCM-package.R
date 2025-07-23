@@ -4,9 +4,8 @@
 #' 
 #' Performs UPCM, a method to model uncertainty in (Generalized) Partial Credit Models
 #' 
-#' 
+"_PACKAGE"
 #' @name UPCM-package
-#' @docType package
 #' @author Gunther Schauberger\cr \email{gunther.schauberger@@tum.de}\cr
 #' \url{https://www.sg.tum.de/epidemiologie/team/schauberger/}
 #' @seealso \code{\link{UPCM}}

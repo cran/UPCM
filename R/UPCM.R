@@ -237,7 +237,7 @@ if(method=="nlminb"){
                   cores = cores, lambda = lambda, lower = l.bound, upper = u.bound, 
                   control=ctrl.nlminb), silent = TRUE)
   
-  if( (class(m.opt) == "try-error")){
+  if(inherits(m.opt, "try-error")){
   try.grad <- FALSE
   }else{
     print("Fit with analytic gradient was successful!")
@@ -268,7 +268,7 @@ if(method=="nlminb"){
                          method = "L-BFGS-B"), silent = TRUE)
      
      
-     if( (class(m.opt) == "try-error")){
+     if(inherits(m.opt, "try-error")){
        try.grad <- FALSE
      }else{
        print("Fit with analytic gradient was successful!")
@@ -291,7 +291,7 @@ if(method=="nlminb"){
 delta <- Sigma <- loglik <- xi <- beta <- slopes <- coefs <- NA
 se.delta <- se.beta <- se.xi <- se.slopes <- se.sigma <- se.vec <-  NA
 
-if( (class(m.opt) != "try-error")){
+if(!inherits(m.opt, "try-error")){
   ## extract results and prepare return
   coefs <- m.opt$par
 

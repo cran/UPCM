@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // loglikUPCM
 double loglikUPCM(arma::vec alpha, arma::vec Y, int Q, int q, int n, int I, int pall, arma::mat GHweights, arma::vec GHnodes, int pX, arma::mat X, int cores, double lambda);
 RcppExport SEXP _UPCM_loglikUPCM(SEXP alphaSEXP, SEXP YSEXP, SEXP QSEXP, SEXP qSEXP, SEXP nSEXP, SEXP ISEXP, SEXP pallSEXP, SEXP GHweightsSEXP, SEXP GHnodesSEXP, SEXP pXSEXP, SEXP XSEXP, SEXP coresSEXP, SEXP lambdaSEXP) {
